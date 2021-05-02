@@ -1,8 +1,6 @@
 "use strict";
 
 const axios = require("axios");
-// const products = require("../src/mocks/products");
-// const shoppingHistory = require("../src/mocks/shoppingHistory");
 const sort = require("../src/helper/sort");
 
 const handler = async (event, context) => {

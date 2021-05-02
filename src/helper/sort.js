@@ -1,5 +1,3 @@
-// const products = require("../mocks/products");
-// const shoppingHistory = require("../mocks/shoppingHistory");
 const R = require("ramda");
 
 const getProductCount = (shoppingHistory) => {
@@ -23,17 +21,9 @@ const sortByPopularity = (products, productCounts) => {
 };
 
 const productNameAscending = R.sortWith([R.ascend(R.prop("name"))]);
-
 const productNameDescending = R.sortWith([R.descend(R.prop("name"))]);
-
 const productPriceAscending = R.sortWith([R.ascend(R.prop("price"))]);
-
 const productPriceDescending = R.sortWith([R.descend(R.prop("price"))]);
-
-// const productsAscByName = productNameAscending(products);
-// const productsDescByName = productNameDescending(products);
-// const productsAscByPrice = productPriceAscending(products);
-// const productsDescByPrice = productPriceDescending(products);
 
 exports.getProductCount = getProductCount;
 exports.sortByPopularity = sortByPopularity;
