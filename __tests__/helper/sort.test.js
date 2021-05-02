@@ -1,4 +1,3 @@
-// const flattenedShoppingHistory = require("../../src/mocks/flattenedShoppingHistory");
 const products = require("../../src/mocks/products");
 const shoppingHistory = require("../../src/mocks/shoppingHistory");
 const productCounts = require("../../src/mocks/productCounts");
@@ -23,12 +22,15 @@ describe("Popular products :", () => {
   it("sorted products by name in ascending order : ", () => {
     expect(sort.productNameAscending(products)).toEqual(productsSortedByNameAsc);
   });
+
   it("sorted products by name in descending order : ", () => {
     expect(sort.productNameDescending(products)).toEqual(productsSortedByNameDesc);
   });
+
   it("sorted products by price in ascending order : ", () => {
     expect(sort.productPriceAscending(products)).toEqual(productsSortedByPriceAsc);
   });
+
   it("sorted products by price in descending order : ", () => {
     expect(sort.productPriceDescending(products)).toEqual(productsSortedByPriceDesc);
   });
