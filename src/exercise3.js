@@ -1,14 +1,11 @@
 "use strict";
 
 const axios = require("axios");
+const utils = require("../src/helper/utils");
 
 module.exports.handler = async (event, context) => {
-  console.log("EVENT: \n" + JSON.stringify(event, null, 2));
-  const TROLLEY_CALCULATOR_URL = process.env.TROLLEY_CALCULATOR_URL;
-  const API_ACCESS_TOKEN = process.env.API_ACCESS_TOKEN;
-  console.log('process.env : ', JSON.stringify(process.env));
+  const { TROLLEY_CALCULATOR_URL, API_ACCESS_TOKEN } = process.env;
   const bodyInput = JSON.parse(event.body);
-  console.log("bodyInput : ", JSON.stringify(bodyInput));
 
   let total = 0;
   const options = {
@@ -22,14 +19,8 @@ module.exports.handler = async (event, context) => {
     console.log(`total : ${total}`);
   } catch (err) {
     console.error("Failed in trolley calculator post call", JSON.stringify(err));
-    return {
-      statusCode: 500,
-      body: JSON.stringify(err, null, 2),
-    };
+    return utils.formatResponse(500, err);
   }
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify(total, null, 2),
-  };
+  
+  return utils.formatResponse(200, total);
 };

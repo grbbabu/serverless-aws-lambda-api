@@ -5,7 +5,8 @@
   "main": "handler.js",
   "scripts": {
     "deploy": "serverless deploy",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "author": "Ramesh",
   "license": "ISC",
