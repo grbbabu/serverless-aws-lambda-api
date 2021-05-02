@@ -1,1 +1,1 @@
-# serverless-aws-lambda-api
+# AWS Lambda deployed using Serverless framework

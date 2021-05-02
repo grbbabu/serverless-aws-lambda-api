@@ -1,0 +1,19 @@
+{
+  "name": "serverless-aws-lambda-api",
+  "version": "1.0.0",
+  "description": "wooliex exercises",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "test": "jest"
+  },
+  "author": "Ramesh",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ramda": "^0.27.1"
+  }
+}
