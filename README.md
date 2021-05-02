@@ -1,1 +1,1 @@
-# AWS Lambda deployed using Serverless framework
+# AWS Lambda deployed using Serverless framework (https://www.serverless.com/)
